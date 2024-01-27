@@ -7,3 +7,13 @@
     -webkit-background-clip: text;
     background-image: linear-gradient(to bottom right, #9dcba4 0%, #53b1dd 50%, #298af5 100%);
 }
+
+.home.one {
+    background-image:url(https://media.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter\(duotone,00192f,00baff\)/SqAZjEqqBAYvyu3KSrWq1d0QLB.jpg);
+  
+}
+.trending {
+    background-image: url(/trending-bg.svg);
+    background-position: 50% 200px;
+    background-size: cover;
+}
