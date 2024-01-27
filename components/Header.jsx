@@ -1,8 +1,6 @@
 import Link from "next/link"
-import {
-    MagnifyingGlassIcon
-} from "@heroicons/react/24/solid"
 import MenuButton from "./MenuButton"
+import SearchButton from "./SearchButton"
 
 export default () => (
     <header className="sticky top-0 z-50 container bg-dark-blue h-16 flex items-center gap-4 px-4">
@@ -10,8 +8,6 @@ export default () => (
         <div className="logo font-bold text-2xl tracking-widest grow text-center"> 
             <Link href="/">CINEDB</Link>
         </div>
-        <button>
-            <MagnifyingGlassIcon className="h-6" />
-        </button>
+        <SearchButton />
     </header>
 )
