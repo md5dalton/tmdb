@@ -1,6 +1,8 @@
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
+import Search from "@/components/Search"
 import Sidebar from "@/components/Sidebar"
+import { SearchProvider } from "@/context/Search"
 import { SidebarProvider } from "@/context/Sidebar"
 import "./globals.css"
 
@@ -12,14 +14,17 @@ export const metadata = {
 const RootLayout = ({ children }) => (
     <html lang="en">
         <body className="text-white">
+            <SearchProvider>
             <SidebarProvider>
                 <Header />
+                <Search />
                 <Sidebar />
                 <main> 
                     {children}
                 </main>
                 <Footer />
             </SidebarProvider>
+            </SearchProvider>
         </body>
     </html>
 )
