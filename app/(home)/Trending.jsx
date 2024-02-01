@@ -1,5 +1,23 @@
+import UList from "@/components/UList"
 import Card from "./(trending)/Card"
 
+const trending = [
+    {
+        name: "Aquaman and the Lost Kingdom",
+        date: "Jan 15, 2015",
+        rating: 75
+    },
+    {
+        name: "The Beekeeper",
+        date: "Jan 15, 2015",
+        rating: 15
+    },
+    {
+        name: "Shaun the Sheep Movie",
+        date: "Jan 15, 2015",
+        rating: 55
+    },
+]
 export default () => (
     <section className="trending text-black bg-no-repeat py-4">
         <div className="flex font-semibold items-center p-4 gap-6">
@@ -13,9 +31,13 @@ export default () => (
                 <input type="radio" className="hidden" />
             </div>
         </div>
-        <div className="min-h-[350px]">
-            <div className="px-4">
-                <Card />
+        <div className="min-h-[350px] mt-4">
+            <div className="px-4 w-full overflow-x-auto">
+                <UList
+                    className="flex gap-6"
+                    items={trending}
+                    itemHandler={item => <Card {...item} />}
+                />
             </div>
         </div>
     </section>
