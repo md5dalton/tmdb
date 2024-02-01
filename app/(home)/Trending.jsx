@@ -1,3 +1,5 @@
+import Card from "./(trending)/Card"
+
 export default () => (
     <section className="trending text-black bg-no-repeat py-4">
         <div className="flex font-semibold items-center p-4 gap-6">
@@ -11,6 +13,10 @@ export default () => (
                 <input type="radio" className="hidden" />
             </div>
         </div>
-        <div className="min-h-[350px]"></div>
+        <div className="min-h-[350px]">
+            <div className="px-4">
+                <Card />
+            </div>
+        </div>
     </section>
 )
