@@ -1,4 +1,6 @@
 import UList from "@/components/UList"
+import Header from "./(shared)/Header"
+import Section from "./(shared)/Section"
 import Card from "./(trending)/Card"
 
 const trending = [
@@ -19,26 +21,16 @@ const trending = [
     },
 ]
 export default () => (
-    <section className="trending text-black bg-no-repeat py-4">
-        <div className="flex font-semibold items-center p-4 gap-6">
-            <h2 className="text-2xl">Trending</h2>
-            <div className="flex text-dark-blue border-[1px] border-dark-blue rounded-full overflow-hidden">
-                <label className="h-8 px-5 flex place-items-center">Today</label>
-                <input type="radio" className="hidden" />
-                <label className="h-8 px-5 flex place-items-center bg-dark-blue rounded-full">
-                    <span className="gradient-text">This week</span>
-                </label>
-                <input type="radio" className="hidden" />
-            </div>
-        </div>
+    <Section className="trending">
+        <Header title="trending" />
         <div className="min-h-[350px] mt-4">
             <div className="px-4 w-full overflow-x-auto">
                 <UList
-                    className="flex gap-6"
+                    className="flex gap-6 pr-10"
                     items={trending}
                     itemHandler={item => <Card {...item} />}
                 />
             </div>
         </div>
-    </section>
+    </Section>
 )
