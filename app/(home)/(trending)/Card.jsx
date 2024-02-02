@@ -4,13 +4,15 @@ import {
 } from "@heroicons/react/24/solid"
 import ProgressBarCircular from "./ProgressBarCircular"
 import Link from "next/link"
+import { getImage } from "@/lib/images"
+import { formatDate } from "@/lib/date"
 
-export default ({ name, date, rating, id, type }) => (
+export default ({ title, name, release_date, first_air_date, vote_average, id, media_type, poster_path }) => (
     <div className="w-40">
         <div className="w-full h-60 relative flex justify-end p-3">
-            <Link href={`/${type}/${id}`}>
+            <Link href={`/${media_type}/${id}`}>
                 <Image
-                    src="/poster.webp"
+                    src={getImage(poster_path)}
                     className="h-full w-full bg-black/50 rounded-lg"
                     fill
                 />
@@ -19,12 +21,12 @@ export default ({ name, date, rating, id, type }) => (
                 <EllipsisHorizontalIcon className="h-8" />
             </button>
             <div className="absolute h-10 w-10 rounded-full left-3 -bottom-5">
-                <ProgressBarCircular percent={rating} />
+                <ProgressBarCircular percent={Math.trunc(vote_average * 10)} />
             </div>
         </div>
         <div className="py-8 px-3">
-            <Link href={`/${type}/${id}`} className="font-bold hover:text-dark-blue">{name}</Link>
-            <p className="opacity-60">{date}</p>
+            <Link href={`/${media_type}/${id}`} className="font-bold hover:text-dark-blue">{title || name}</Link>
+            <p className="opacity-60">{formatDate(release_date || first_air_date)}</p>
         </div>
     </div>
 )
