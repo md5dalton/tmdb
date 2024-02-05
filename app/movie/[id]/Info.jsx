@@ -8,4 +8,13 @@ export default () => {
     
     const { dominantColor, darkerColor, lighterColor } = useExtractColor(img)
 
+    console.log(dominantColor, darkerColor, lighterColor)
+
+    return (
+        <div style={{ backgroundColor: `linear-gradient(45deg, ${dominantColor}, ${darkerColor}, ${lighterColor})` }}>
+            <h1>Extract Color</h1>
+            <img src={img} alt="random image" width="200" height="300" />
+        </div>
+    )
+
 }
