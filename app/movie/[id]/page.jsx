@@ -1,8 +1,17 @@
+import { details } from "@/actions/movie"
 import Info from "./Info"
+import Media from "./Media"
 
-export default async () => (
-    <div>
-        <Info />
+export default async ({ params: { id }, children }) => {
 
-    </div>
-)
+    const movie = await details(id)
+
+    // console.log(movie)
+    
+    return (
+        <div>
+            <Info {...movie} />
+            <Media />
+        </div>
+    )
+}
