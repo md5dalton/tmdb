@@ -2,10 +2,10 @@ import Image from "next/image"
 import {
     EllipsisHorizontalIcon,
 } from "@heroicons/react/24/solid"
-import ProgressBarCircular from "./ProgressBarCircular"
 import Link from "next/link"
 import { getImage } from "@/lib/images"
 import { formatDate } from "@/lib/date"
+import ProgressBarCircular from "@/components/ProgressBarCircular"
 
 export default ({ title, name, release_date, first_air_date, vote_average, id, media_type, poster_path }) => (
     <div className="w-40">
