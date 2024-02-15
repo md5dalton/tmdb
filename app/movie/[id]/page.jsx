@@ -1,10 +1,7 @@
 import { getImage } from "@/lib/images"
 import Image from "next/image"
-// import { ColorExtractor } from "react-color-extractor"
-import Info from "./Info"
 
-export default () => {
-    
+export default async () => {
     return (
         <section>
             <div className="h-20 w-20 relative">
@@ -15,7 +12,7 @@ export default () => {
                         fill
                     />
                 </ColorExtractor> */}
-                <Info />
+                {/* <Info /> */}
             </div>
         </section>
     )
