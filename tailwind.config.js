@@ -17,6 +17,9 @@ module.exports = {
             "vibrant-dark-blue": "rgb(6,37,65)",
             "vibrant-light-blue": "rgb(0,118,241)",
             },
+            animation: {
+                slide: "slide 0.5s ease-out"
+            }
         },
     },
     plugins: [],
