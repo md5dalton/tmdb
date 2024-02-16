@@ -1,3 +1,3 @@
-import { query } from "@/lib/base"
+import { query } from "@/apis/tmdb"
 
-export const details = async id => query(`movie/${id}`)
+export const details = async id => await query(`movie/${id}`)
