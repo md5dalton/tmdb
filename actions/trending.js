@@ -1,3 +1,3 @@
-import { query } from "@/lib/base"
+import { query } from "@/apis/tmdb"
 
-export const getAll = async (time = "day") => query(`trending/all/${time}`)
+export const getAll = async (time = "day") => await query(`trending/all/${time}`)
