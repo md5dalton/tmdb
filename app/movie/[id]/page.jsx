@@ -2,17 +2,17 @@ import { details } from "@/actions/movie"
 import Info from "./Info"
 import Media from "./Media"
 import { query } from "@/apis/yts"
-import { API_URL } from "@/lib/config.yts"
 
 export default async ({ params: { id }, children }) => {
 
     const movie = await details(id)
-    const torrent = await fetch(API_URL + movie.imdb_id)
-    console.log(movie.imdb_id)
-    
+
+    // const torrent = await query(movie.imdb_id)
+
+    // console.log(torrent)
     return (
         <div>
-            <Info {...movie} />
+            {/* <Info {...movie} /> */}
             <Media />
         </div>
     )
