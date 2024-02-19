@@ -12,8 +12,11 @@ export default ({ title, name, release_date, first_air_date, vote_average, id, m
         <div className="w-full h-60 relative flex justify-end p-3">
             <Link href={`/${media_type}/${id}`}>
                 <Image
+                    alt={title || name}
                     src={getImage(poster_path)}
                     className="h-full w-full bg-black/50 rounded-lg"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    // placeholder="blur"
                     fill
                 />
             </Link>
