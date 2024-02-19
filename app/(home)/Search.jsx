@@ -1,8 +1,11 @@
 export default () => (
     <section>
         <div
+            style={{
+                backgroundImage: "url('https://media.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter\(duotone,00192f,00baff\)/SqAZjEqqBAYvyu3KSrWq1d0QLB.jpg')"
+            }}
             className="home one
-                p-4 py-6 min-h-[300px] max-h-[360px] 
+                p-4 py-6 min-h-[300px] max-h-[360px] md:py-12 md:px-8
                 flex flex-col justify-between
                 bg-black/20 bg-no-repeat bg-cover bg-center">
             <div className="grid gap-2">
