@@ -7,7 +7,7 @@ export default async () => {
     return <>
         <Search />
         <Trending />
-        <Trailers />
+        {/* <Trailers /> */}
     </>
 
 }
