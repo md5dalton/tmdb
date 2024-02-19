@@ -22,7 +22,7 @@ const RootLayout = ({ children }) => (
                 <Header />
                 <Search />
                 <Sidebar />
-                <main> 
+                <main className="max-w-[1300px] xl:m-auto"> 
                     {children}
                 </main>
                 <Footer />
