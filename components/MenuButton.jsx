@@ -5,12 +5,12 @@ import {
     Bars2Icon,
 } from "@heroicons/react/24/solid"
 
-export default () => {
+export default props => {
 
     const { toggle } = useSidebar()
 
     return (
-        <button onClick={toggle}>
+        <button onClick={toggle} {...props}>
             <Bars2Icon className="h-6" />
         </button>
     )
