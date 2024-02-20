@@ -12,7 +12,7 @@ export default async ({ params: { id }, children }) => {
     // console.log(torrent)
     return (
         <div>
-            {/* <Info {...movie} /> */}
+            <Info {...movie} />
             <Media />
         </div>
     )
