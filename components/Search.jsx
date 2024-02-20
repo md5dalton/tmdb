@@ -23,7 +23,7 @@ export default () => {
 
     return isOpen && (
         <Modal toggler={toggle}>
-            <aside className="bg-white text-black min-h-52">
+            <aside className="bg-white text-black min-h-52 md:max-w-[600px] md:m-auto md:shadow-md">
                 <div className="flex items-center px-4 py-2 border-b-[1px]">
                     <MagnifyingGlassIcon height={20} />
                     <input type="text" placeholder="Search" className="px-2 italic grow outline-none text-black/80" />
